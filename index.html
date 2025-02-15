@@ -9,14 +9,27 @@
 <body>
     <div class="container">
         <h1>Task Recorder</h1>
+        <button id="theme-toggle">🌙 Toggle Theme</button>
+        
         <div class="input-section">
-            <input type="text" id="taskTitle" placeholder="Task Title">
-            <textarea id="taskDesc" placeholder="Task Description"></textarea>
-            <input type="date" id="taskDate">
+            <input type="text" id="project" placeholder="Project Name">
+            <input type="text" id="title" placeholder="Task Title">
+            <textarea id="description" placeholder="Task Description"></textarea>
+            <input type="date" id="date">
             <button onclick="addTask()">Add Task</button>
         </div>
+
+        <h2>Filter Tasks</h2>
+        <select id="filter-project" onchange="filterTasks()">
+            <option value="">All Projects</option>
+        </select>
+        <select id="filter-month" onchange="filterTasks()">
+            <option value="">All Months</option>
+        </select>
+
         <ul id="taskList"></ul>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
